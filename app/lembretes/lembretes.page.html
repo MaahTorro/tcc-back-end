@@ -1,0 +1,76 @@
+<ion-content>
+  <div class="gradient">
+    <h1><u>Lembretes</u></h1>
+  </div>
+
+  <div class="lembrete-titulo">
+
+    <h2>Lembrete</h2>
+
+  </div>
+
+
+  
+  <div class="box-center-content">
+
+    <div class="box-lembretes">
+
+      <div class="lembretes">
+        <div class="backgroundlogo">
+          <ion-icon name="bookmarks">
+          </ion-icon>
+        </div>
+        <p>Amendoim expira amanhã!</p>
+      </div>
+
+      <div class="lembretes">
+        <div class="backgroundlogo">
+          <ion-icon name="bookmarks">
+          </ion-icon>
+        </div>
+        <p>Você cumpriu uma meta!</p>
+      </div>
+
+      <div class="lembretes">
+        <div class="backgroundlogo">
+          <ion-icon name="bookmarks">
+          </ion-icon>
+        </div>
+        <p>Um evento está próximo.</p>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+</ion-content>
+
+
+<!-- footer -->
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button>
+    <ion-icon name="receipt-outline"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button>
+    <ion-icon name="stats-chart-outline" routerLink="../estatisticas" class=""></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button>
+    <ion-icon name="home-outline" routerLink="../inicio" class="selected"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button>
+    <ion-icon [routerLink]="'../produtos/'" name="cube-outline"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon routerLink="../ajustes" name="settings-outline" class=""></ion-icon>
+  </ion-tab-button>
+
+
+</ion-tab-bar>
+

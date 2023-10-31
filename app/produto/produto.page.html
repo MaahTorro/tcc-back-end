@@ -1,0 +1,26 @@
+<div *ngIf="produto">
+  <h1>Nome: {{produto.nome}}</h1>
+  <ion-list>
+    <ion-item>
+      <ion-input label="Quantidade" placeholder="{{produto.quantidade}}" [(ngModel)]="quantidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Valor" placeholder="{{produto.precoProduto}}" [(ngModel)]="preco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="validade" placeholder="{{produto.validade}}" [(ngModel)]="validade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Descrição" placeholder="{{produto.descricao}}" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Preço de Produção" placeholder="{{produto.precoProducao}}" [(ngModel)]="precoProducao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button id="present-alert">Click Me</ion-button>
+      <ion-alert trigger="present-alert" header="Coloque as informações" [buttons]="alertButtons"
+        [inputs]="alertInputs"></ion-alert>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="salvarInformacoes()">Salvar</ion-button>
+</div>

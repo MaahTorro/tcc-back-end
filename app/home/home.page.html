@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+
+
+    <section>
+      <div class="logo">
+      </div>
+      <input  type="email" placeholder="Email" [(ngModel)]="email">
+      <input  type="password" placeholder="Senha" [(ngModel)]="senha">
+      <button id="botao-login" (click)="login(email, senha)">Entrar</button>
+      <h2 class="textlogin">Não possui uma conta? <a routerLink="../cadastro" routerLinkActive="router-link-active"
+          id="botao-cadastro">Cadastre-se!</a> </h2>
+    </section>
+
+
+</ion-content>
+
+<ion-footer>
+  <div class="waves">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+</ion-footer>

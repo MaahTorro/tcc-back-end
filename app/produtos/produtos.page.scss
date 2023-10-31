@@ -1,0 +1,189 @@
+.gradient {
+  height: 200px;
+  width: 100%;
+  background-image: linear-gradient(#143cc9, #1d8efc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
+}
+
+.text-box {
+  position: relative;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -40px;
+  background-color: #ffffff;
+  height: 80px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.info-box h2 {
+  color: #1765db;
+  font-size: 18px;
+  margin: 0%;
+  font-weight: 700;
+}
+
+.info-box p {
+  color: #212c4a;
+  font-size: 14px;
+  text-align: center;
+  margin: 0%;
+  font-weight: 700;
+}
+
+.selected {
+  color: #143cc9;
+  font-size: 32px;
+  margin-bottom: 7px;
+  transition: 2s;
+}
+
+.cards {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 240px;
+  min-width: 200px;
+  margin: 36px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.card-text-dentro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  height: 45px;
+}
+
+.background {
+  background-color: #143cc9;
+  color: white;
+  padding: 5px;
+  border-radius: 6px;
+  font-weight: 100;
+}
+
+.card-produtos {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.editar {
+  background-color: #143cc9;
+  padding: 8px;
+  color: white;
+  width: 150px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.cards h1 {
+  text-align: center;
+}
+
+.titulos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.graf {
+  background-color: #143cc9;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.graf p {
+  color: white;
+  height: 80%;
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  text-align: center;
+  align-items: flex-end;
+  max-height: 180px;
+}
+
+.graficos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.weee h1 {
+  margin: 0;
+  padding: 0;
+  max-width: 90px;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.wee {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+.titulo-prod {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.estoques {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 340px;
+  font-weight: 700;
+}
+
+.produtos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-estoques {
+  color: #143cc9;
+  font-weight: 700;
+}
+
+.produtos p {
+  max-width: 120px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

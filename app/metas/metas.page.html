@@ -1,0 +1,41 @@
+<ion-content [fullscreen]="true">
+    <div class="gradient">
+      <h1><u>Minhas Metas</u></h1>
+    </div>
+
+    <ul>
+      <li *ngFor="let meta of listaMetas">
+        <div>
+          <h2>Nome da meta: {{meta.nome}}</h2>
+          <h3>Data de conclusão da meta: {{meta.conclusao}}</h3>
+          <h4>Descrição: {{meta.descricao}}</h4>
+          <h3>Porcentagem: {{meta.porcentagem}}%</h3>
+          <div class="barraPorcentagem" ></div>
+        </div>
+      </li>
+    </ul>
+    
+    <ion-button expand="full" (click)="paginaCriaMeta()" >Criar META</ion-button>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button>
+    <ion-icon name="receipt-outline" class="selected"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="stats-chart-outline" routerLink="../estatisticas" ></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="home-outline" (click)="paginaInicio()" ></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon routerLink="../produtos" name="cube-outline"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="settings-outline"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

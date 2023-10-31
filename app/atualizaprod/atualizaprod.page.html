@@ -1,0 +1,27 @@
+<ion-content [fullscreen]="true">
+
+
+  <section>
+    <div class="logo"></div>
+    <h1>Edite seu produto</h1>
+    <input type="text" placeholder="{{produto.nome}}" [(ngModel)]="produto.nome">
+    <input type="text" placeholder="{{produto.qunatidade}}" [(ngModel)]="produto.quantidade">
+    <input type="date" placeholder="{{produto.validade}}" [(ngModel)]="produto.validade">
+    <input type="text" placeholder="{{produto.precoProduto}}" [(ngModel)]="produto.precoProduto">
+    <div class="botoesdiv">
+      <button id="botao-login" (click)="editarProduto()">Editar</button>
+    </div>
+
+
+  </section>
+
+
+</ion-content>
+
+<ion-footer>
+  <div class="waves">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+</ion-footer>

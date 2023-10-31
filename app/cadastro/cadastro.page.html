@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+
+
+  <section>
+    <div class="logo">
+    </div>
+    <h1>Cadastro</h1>
+    <input type="text" placeholder="Nome" [(ngModel)]="nome">
+    <input type="text" placeholder="Nome da empresa" [(ngModel)]="nomeEmpresa">
+    <input type="tel" placeholder="Telefone" [(ngModel)]="telefone">
+    <input type="email" placeholder="Email" [(ngModel)]="email">
+    <input type="password" placeholder="Senha" [(ngModel)]="senha">
+    <input type="password" placeholder="Confirmar senha" [(ngModel)]="confirmaSenha">
+    <button id="botao-login" (click)="cadastrar(email, senha, confirmaSenha)">Criar</button>
+    <h2 class="textlogin">Já possui uma conta? <a routerLink="../home" routerLinkActive="router-link-active"
+        id="botao-cadastro">Entre!</a> </h2>
+  </section>
+
+
+</ion-content>
+
+<ion-footer>
+  <div class="waves">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+</ion-footer>

@@ -1,0 +1,155 @@
+<ion-content [fullscreen]="true">
+
+  <div class="gradient">
+    <h1>Olá, {{nome}}</h1>
+  </div>
+  <div class="text-box">
+
+    <div class="info-box">
+      <h2>R${{rendaS}}</h2>
+      <p>Total</p>
+    </div>
+
+
+    <div class="info-box">
+      <h2>R${{rendaM}}</h2>
+      <p>Mensal</p>
+    </div>
+
+
+    <div class="info-box">
+      <h2>R${{rendaD}}</h2>
+      <p>Diaria</p>
+    </div>
+
+  </div>
+
+
+  <div class="lembrete-titulo" routerLink="../lembretes">
+    <h2>Lembretes</h2>
+    <ion-icon class="icone-arrow" name="caret-forward-outline" ></ion-icon>
+  </div>
+
+
+
+  <div class="box-center-content">
+
+    <div class="box-lembretes">
+
+      <div class="lembretes">
+        <div class="backgroundlogo">
+          <ion-icon name="bookmarks">
+          </ion-icon>
+        </div>
+        <p>Amendoim expira amanhã!</p>
+      </div>
+
+      <div class="lembretes">
+        <div class="backgroundlogo">
+          <ion-icon name="bookmarks">
+          </ion-icon>
+        </div>
+        <p>Você cumpriu uma meta!</p>
+      </div>
+
+      <div class="lembretes">
+        <div class="backgroundlogo">
+          <ion-icon name="bookmarks">
+          </ion-icon>
+        </div>
+        <p>Um evento está próximo.</p>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="estatisticas-titulo" routerLink="../estatisticas">
+    <h2>Estatísticas</h2>
+    <ion-icon class="icone-arrow" name="caret-forward-outline"></ion-icon>
+  </div>
+
+  <div class="estat">
+
+
+    <div class="box-estat">
+
+      <div class="grafico" [style]="grafico"></div>
+
+      <div class="column">
+        <div class="legenda-estat" *ngFor="let produto of listaProdutos">
+          <div class="legenda-color"></div>
+          <div class="legenda-text">{{produto[0].nome}}</div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <div class="vender-titulo">
+    <h2>Vender</h2>
+    <ion-icon class="icone-arrow" name="caret-forward-outline"></ion-icon>
+  </div>
+
+  <div class="box-center-content">
+
+    <div class="box-vender" *ngIf="listaProdutos">
+
+      <div class="lembretes" *ngFor="let produto of listaProdutos" (click)="vender(produto)">
+        <div class="backgroundvender {{produto[0].estoque.status}}">
+          <p>{{produto[0].quantidade}}</p>
+        </div>
+        <div class="precoeproduto">
+          <p>{{produto[0].nome}}</p>
+          <p>R${{produto[0].precoProduto}}</p>
+        </div>
+      </div>
+
+      <button class="lembretes" routerLink="../listaprod">
+        <div class="backgroundvender">
+          <ion-icon name="add-outline">
+          </ion-icon>
+        </div>
+        <p>Adicionar produto</p>
+      </button>
+
+
+    </div>
+
+  </div>
+
+
+</ion-content>
+
+<!-- footer -->
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button>
+    <ion-icon name="receipt-outline" [routerLink]="'../metas/' + uid"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="stats-chart-outline" routerLink="../estatisticas"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="home-outline" routerLink="../inicio" class="selected"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon [routerLink]="'../produtos/' + uid" name="cube-outline"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="settings-outline" routerLink="../ajustes"></ion-icon>
+  </ion-tab-button>
+  
+
+
+</ion-tab-bar>

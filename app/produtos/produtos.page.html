@@ -1,0 +1,155 @@
+<ion-content [fullscreen]="true">
+  <div class="gradient">
+    <h1><u>Produtos</u></h1>
+  </div>
+
+  <div class="card-produtos">
+    <div class="cards" *ngFor="let produto of listaProdutos">
+      <h1>{{produto[0].nome}}</h1>
+
+      <div class="card-text-dentro">
+        <p>Quantidade:</p>
+        <p class="background">{{produto[0].quantidade}}</p>
+      </div>
+      <div class="card-text-dentro">
+        <p>Preço:</p>
+        <p class="background">R$ {{produto[0].precoProduto}}</p>
+      </div>
+      <div class="card-text-dentro">
+        <p>Validade:</p>
+        <p class="background">{{produto[0].validade}}</p>
+      </div>
+
+      <button class="editar" (click)="pagProduto(produto)">Editar</button>
+    </div>
+    
+  </div>
+
+
+  <!-- Gráfico dos produtos mais vendidos -->
+
+  <div class="titulos">
+    <h1>Produtos mais vendidos</h1>
+  </div>
+
+
+    
+  <div class="graficos" *ngIf="topTresVendas.length >= 2">
+
+    
+
+    <div class="weee">
+
+      <h1>{{topTresVendas[1][1]}}</h1> 
+
+      <div class="graf"  style="height: 110px; background-color: #3282CC;">
+        <p>{{topTresVendas[1][0]}} Vendas </p>
+      </div>
+    </div>
+
+    <div class="weee">
+
+      <h1>{{topTresVendas[0][1]}}</h1> 
+
+      <div class="graf"  style="height: 180px; background-color: #39A0FF;">
+        <p>{{topTresVendas[0][0]}} Vendas</p>
+      </div>
+    </div>
+
+    <div class="weee">
+
+      <h1>{{topTresVendas[2][0]}}</h1> 
+
+      <div class="graf" style="height: 75px; background-color: #1D5992;">
+        <p>{{topTresVendas[2][0]}} Vendas </p>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="titulos">
+    <h1>Estoque</h1>
+  </div>
+
+
+  <!-- Estoque -->
+
+
+
+  <ion-list [inset]="true">
+
+
+    <div class="titulo-prod">
+
+
+      <div class="estoques">
+        <p class="titulo-estoques">Produtos <br> no estoque</p>
+        <div class="produtos">
+          <p>Hamburguer</p>
+          <p>Alface</p>
+          <p>Abacaxi do sul da africa</p>
+          <p>X - Salada</p>
+        </div>
+      </div>
+
+
+      <div class="estoques">
+        <p class="titulo-estoques">Quantidade <br> atual</p>
+        <div class="produtos">
+          <p>60</p>
+          <p>23</p>
+          <p>53</p>
+          <p>20</p>
+        </div>
+      </div>
+
+      <div class="estoques">
+        <p class="titulo-estoques">Estoque <br> máximo</p>
+        <div class="produtos">
+          <p>70</p>
+          <p>70</p>
+          <p>80</p>
+          <p>25</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <hr style="color: black;">
+
+
+
+  </ion-list>
+
+</ion-content>
+
+<!-- footer -->
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button>
+    <ion-icon name="receipt-outline" (click)="paginaMetas()"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button>
+    <ion-icon name="stats-chart-outline" (click)="paginaEstatisticas()"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button>
+    <ion-icon name="home-outline" (click)="paginaInicio()"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button>
+    <ion-icon name="cube-outline" class="selected"></ion-icon>
+  </ion-tab-button>
+
+  
+  <ion-tab-button>
+    <ion-icon name="settings-outline" (click)="paginaAjustes()"></ion-icon>
+  </ion-tab-button>
+  
+</ion-tab-bar>  

@@ -1,0 +1,77 @@
+.botao {
+  margin-top: 15px;
+  border-radius: 100%;
+  background-color: #1765DB;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  height: 55px;
+  width: 55px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 9999;
+  font-size: 25px;
+}
+
+.botao-add {
+  margin-top: 15px;
+  border-radius: 100%;
+  background-color: #0e9b55;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  height: 55px;
+  width: 55px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: 95px;
+  right: 10px;
+  z-index: 9999;
+  font-size: 25px;
+}
+
+.botao-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.gradient {
+  height: 150px;
+  width: 100%;
+  background-image: linear-gradient(#143cc9, #1d8efc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: white;
+}
+
+ion-item-sliding {
+  margin-top: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+ion-item {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+ion-list {
+  height: 100%;
+  width: 100%;
+}
+
+.text-dentro-card {
+  width: 100%;
+  display: flex;
+
+}
+
+.text-dentro-card p {
+  margin-right: 25px;
+}

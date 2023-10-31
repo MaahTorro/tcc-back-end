@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <div class="gradient">
+    <h1><u>Estatísticas</u></h1>
+  </div>
+
+
+  <div class="estatisticas-titulo" routerLink="../estatisticas">
+    <h2>Estatísticas</h2>
+    <ion-icon class="icone-arrow" name="caret-forward-outline"></ion-icon>
+  </div>
+
+  <div class="estat">
+
+
+    <div class="box-estat">
+
+      <div class="grafico" [style]=""></div>
+
+      <div class="column">
+        <div class="legenda-estat" >
+          <div class="legenda-color"></div>
+          <div class="legenda-text"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+</ion-content>
+
+<!-- footer -->
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button>
+    <ion-icon name="receipt-outline"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="stats-chart-outline" routerLink="../estatisticas" class="selected"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon name="home-outline" routerLink="../inicio" ></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon routerLink="../produtos" name="cube-outline"></ion-icon>
+  </ion-tab-button>
+  
+  <ion-tab-button>
+    <ion-icon routerLink="../ajustes" name="settings-outline"></ion-icon>
+  </ion-tab-button>
+  
+
+</ion-tab-bar>

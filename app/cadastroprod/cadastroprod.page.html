@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+
+
+  <section>
+    <div class="logo"></div>
+    <h1>Cadastre seus produtos</h1>
+    <input type="text" placeholder="Nome" [(ngModel)]="nome">
+    <input type="text" placeholder="Quantidade" [(ngModel)]="quantidade">
+    <input type="text" placeholder="Validade" [(ngModel)]="validade">
+    <input type="text" placeholder="Preço de venda" [(ngModel)]="precoProduto">
+    <div class="botoesdiv">
+      <button id="botao-login" (click)="pagListaProd()">Continuar</button>
+      <button class="adicionar" (click)="cadastroProduto(nome, quantidade, validade, precoProduto)">+</button>
+    </div>
+
+
+  </section>
+
+
+</ion-content>
+
+<ion-footer>
+  <div class="waves">
+    <div class="wave wave1"></div>
+    <div class="wave wave2"></div>
+    <div class="wave wave3"></div>
+  </div>
+</ion-footer>

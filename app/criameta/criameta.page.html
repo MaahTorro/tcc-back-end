@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <h1 style="text-align: center;">Criar Meta</h1>
+  <div>
+    <ion-item>
+      <ion-input label="Nome" placeholder="nome da meta" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Descrição" placeholder="uma breve descricao" [(ngModel)]="descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <h5 style="margin-right: 1rem;">Tipo da meta</h5>
+      <ion-radio-group (ionChange)="onIonChange($event)">
+        <ion-radio value="reais">Quantidade em reais</ion-radio><br />
+        <ion-radio value="dias">Dias para trabalhar</ion-radio><br />
+        <ion-radio value="produto">Vender um produto</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Quanto pretende fazer" placeholder="R$" disabled="{{metaReais}}" [(ngModel)]="reais"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Quantos dias quer trabalhar" placeholder="dias" disabled="{{metaDias}}" [(ngModel)]="dias"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Qual produto quer vender" placeholder="produto" disabled="{{metaProduto}}" [(ngModel)]="produto"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!metaProduto">
+      <ion-input label="Quantos pretende vender" placeholder="quantidade" disabled="{{metaProduto}}" [(ngModel)]="produtoQuantidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox justify="space-between" (ionChange)="conclusao($event)">Tem data de conclusão ? </ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Pretende terminar em: " type="date" disabled="{{checkBox}}" [(ngModel)]="data"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="adicionarMeta()"> Adicionar meta</ion-button>
+  </div>
+</ion-content>

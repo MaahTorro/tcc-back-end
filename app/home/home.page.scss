@@ -1,0 +1,158 @@
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  height: 90vh;
+  width: 100%;
+}
+
+.logo {
+  background-image: url(../../assets/icon/logo.svg);
+  background-size: cover;
+  background-position: center;
+  width: 220px;
+  height: 220px;
+  margin-bottom: 10px;
+}
+
+ion-footer{
+  background-repeat: no-repeat;
+  background-size:auto;
+  background-position: center;
+  box-shadow: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  border-radius: 5px;
+  color: black;
+  border: #1765DB 2px solid;
+  margin-top: 15px;
+  height: 45px;
+  width: 260px;
+  font-size: 14px;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+
+input:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #3568E9;
+  font-size: 14px;
+  letter-spacing: -.5px;
+}
+
+ion-content {
+  --overflow: hidden;
+}
+
+.textlogin {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#botao-login {
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color: #1765DB;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  height: 40px;
+  width: 260px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#error {
+  border: red 2px solid;
+}
+
+#error::placeholder {
+  color: red;
+}
+
+// // waves
+
+.waves {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+  height: 100px;
+  background: url(../../assets/waves.png);
+  background-size: 1000px 100px;
+
+}
+
+.wave.wave1 {
+  animation: animate 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+
+.wave.wave2 {
+  animation: animate2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+
+.wave.wave3 {
+  animation: animate 15s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+
+@keyframes animate {
+  0% {
+      background-position-x: 0;
+  }
+
+  100% {
+      background-position-x: 1000px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+      background-position-x: 0;
+  }
+
+  100% {
+      background-position-x: -1000px;
+  }
+}
+
+@media screen and (max-height: 600px){
+
+  ion-footer {
+    display: none;
+  }
+}
